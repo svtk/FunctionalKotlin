@@ -8,3 +8,6 @@ fun main(args: Array<String>) {
     println("answer = $answer")
 }
 
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}

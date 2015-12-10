@@ -23,14 +23,6 @@ class Entrepreneur(
         val startUpName: String
 ) : Person(name, age)
 
-fun getStudentsList() = listOf(
-        Student("Paul", 23),
-        Student("Luis", 19),
-        Student("Lucas", 24),
-        Student("Emma", 23),
-        Student("Noah", 20)
-)
-
 fun main(args: Array<String>) {
     val ben = Student("Ben", 21)
     ben.university = TUM
@@ -41,6 +33,14 @@ fun main(args: Array<String>) {
         student.university = TUM
     }
 }
+
+fun getStudentsList() = listOf(
+        Student("Paul", 23),
+        Student("Luis", 19),
+        Student("Lucas", 24),
+        Student("Emma", 23),
+        Student("Noah", 20)
+)
 
 
 

@@ -21,3 +21,6 @@ val cushion = Product("cushion", 131.0, 0)
 
 fun getProducts() = listOf(cactus, cake, camera, car, carrot, cellPhone, chimney, certificate, cigar, coffee, coffeeMaker,
         cola, cranberry, crocs, crocodile, cushion)
+
+fun getTitleColor() = "#b9c9fe"
+fun getCellColor(index: Int, row: Int) = if ((index + row) %2 == 0) "#dce4ff" else "#eff2ff"

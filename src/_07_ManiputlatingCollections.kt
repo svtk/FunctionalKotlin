@@ -7,9 +7,7 @@ import model.*
 fun main(args: Array<String>) {
     val s1 = Student("Martin", 23)
     val students = getStudentsList()
-    for (student in students) {
-        student.university = TUM
-    }
+    students.forEach { it.university = TUM }
 
     val olderThan21 = HashSet<Student>()
 

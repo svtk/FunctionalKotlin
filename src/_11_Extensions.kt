@@ -1,4 +1,4 @@
-package extensions
+package util
 
 import model.*
 
@@ -11,5 +11,5 @@ fun test() {
     "abc".lastChar()
 }
 
-//improving existing api, avoid dirty traits
+//improving existing api, avoid dirty interfaces
 fun Student.isAdult() = age != null && age > 21

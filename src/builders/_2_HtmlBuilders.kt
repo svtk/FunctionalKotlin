@@ -1,15 +1,13 @@
 package builders
 
+import builders.data.*
 import builders.htmlLibrary.*
-
-fun getTitleColor() = "#b9c9fe"
-fun getCellColor(index: Int, row: Int) = if ((index + row) %2 == 0) "#dce4ff" else "#eff2ff"
 
 fun renderProductTable(): String {
     return html {
         table {
             tr (color = getTitleColor()) {
-                td {
+                this.td {
                     text("Product")
                 }
                 td {
@@ -17,6 +15,20 @@ fun renderProductTable(): String {
                 }
                 td {
                     text("Popularity")
+                }
+            }
+            val products = getProducts()
+            for ((index, product) in products.withIndex()) {
+                tr {
+                    td (color = getCellColor(index, 0)) {
+                        text(product.description)
+                    }
+                    td (color = getCellColor(index, 1)) {
+                        text(product.price)
+                    }
+                    td (color = getCellColor(index, 2)) {
+                        text(product.popularity)
+                    }
                 }
             }
         }
