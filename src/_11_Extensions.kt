@@ -2,9 +2,9 @@ package extensions
 
 import model.*
 
-fun String.lastChar() = this.charAt(this.length - 1)
+fun String.lastChar() = this.get(this.length - 1)
 //'this' can be omitted
-fun String.lastChar1() = charAt(length - 1)
+fun String.lastChar1() = get(length - 1)
 
 fun test() {
     //visible in completion

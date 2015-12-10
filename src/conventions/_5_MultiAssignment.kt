@@ -6,8 +6,8 @@ fun multiAssignPair(pair: Pair<Int, String>) {
 }
 
 class MyPair {
-    fun component1(): Int = 1
-    fun component2(): String = "a"
+    operator fun component1(): Int = 1
+    operator fun component2(): String = "a"
 }
 
 fun howItWorks() {
@@ -23,7 +23,7 @@ fun howItWorks() {
 }
 
 fun iterateOverCollectionWithIndex(collection: Collection<Int>) {
-    for ((index, element) in collection.withIndices()) {
+    for ((index, element) in collection.withIndex()) {
         println("$index: $element")
     }
 }

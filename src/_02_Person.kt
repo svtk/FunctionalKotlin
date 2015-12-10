@@ -24,21 +24,21 @@ class Entrepreneur(
 ) : Person(name, age)
 
 fun getStudentsList() = listOf(
-        Student("Marek", 19),
+        Student("Paul", 23),
+        Student("Luis", 19),
         Student("Lucas", 24),
-        Student("Toby", 23),
-        Student("Ales", 23),
-        Student("David", 20)
+        Student("Emma", 23),
+        Student("Noah", 20)
 )
 
 fun main(args: Array<String>) {
-    val martin = Student("Martin", 21)
-    martin.university = UniversityOfHradecKralove
-    println(martin)
+    val ben = Student("Ben", 21)
+    ben.university = TUM
+    println(ben)
 
     val students = getStudentsList()
     for (student in students) {
-        student.university = UniversityOfHradecKralove
+        student.university = TUM
     }
 }
 

@@ -11,7 +11,7 @@ fun foo(list: List<Student>) {
     //the same as
     my_filter(list, { it.age != null })
 
-    my_map(list) { (s: Student) -> Employee(s.name, s.age, "") }
+    my_map(list) { s: Student -> Employee(s.name, s.age, "") }
 }
 
 fun <T> my_filter(list: List<T>, predicate: (T) -> Boolean): List<T> {

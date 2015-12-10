@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
     val s1 = Student("Martin", 23)
     val students = getStudentsList()
     for (student in students) {
-        student.university = UniversityOfHradecKralove
+        student.university = TUM
     }
 
     val olderThan21 = HashSet<Student>()
@@ -20,12 +20,12 @@ fun main(args: Array<String>) {
     }
 
     // "functional" version
-    val olderThan21v1 = students.filter({ (s: Student) -> s.age != null && s.age > 21 })
-    val olderThan21v2 = students.filter { (s: Student) -> s.age != null && s.age > 21 }
+    val olderThan21v1 = students.filter({ s: Student -> s.age != null && s.age > 21 })
+    val olderThan21v2 = students.filter { s: Student -> s.age != null && s.age > 21 }
     val olderThan21v3 = students.filter { s -> s.age != null && s.age > 21 }
     val olderThan21v4 = students.filter { it.age != null && it.age > 21 }
 
-    val isOldEnough: (Student) -> Boolean = {(s: Student) -> s.age != null && s.age > 21 }
+    val isOldEnough: (Student) -> Boolean = { s: Student -> s.age != null && s.age > 21 }
     val olderThan21v5 = students.filter(isOldEnough)
 
     //sout - question

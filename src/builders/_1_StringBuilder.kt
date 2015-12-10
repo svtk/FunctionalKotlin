@@ -11,7 +11,7 @@ fun buildStringExample1(): String {
 }
 
 fun buildStringExample2(): String {
-    return buildString {
+    return doBuildString {
         this.append("Numbers: ")
         for (i in 1..10) {
             // 'this' can be omitted
@@ -22,7 +22,7 @@ fun buildStringExample2(): String {
 
 
 
-fun buildString(build: StringBuilder.() -> Unit): String {
+fun doBuildString(build: StringBuilder.() -> Unit): String {
     val stringBuilder = StringBuilder()
     stringBuilder.build()
     return stringBuilder.toString()

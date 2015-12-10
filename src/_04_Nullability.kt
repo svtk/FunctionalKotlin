@@ -5,8 +5,8 @@ import model.Person
 
 fun main(args: Array<String>) {
     //using java
-    val person = JPerson("Tomas")
-    if (person.getAge() < 42) {
+    val person = JPerson("Max")
+    if (person.age < 42) {
         println("yep!")
     }
 
@@ -37,4 +37,4 @@ fun doSmthWithPerson(person: Person?) {
     val age = person.age
 }
 
-fun fail(message: String) = throw AssertionError(message)
+fun fail(message: String): Nothing = throw AssertionError(message)

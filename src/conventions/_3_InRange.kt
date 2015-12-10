@@ -1,8 +1,8 @@
 package conventions
 
 
-trait Container<E> {
-    fun contains(element: E): Boolean
+interface Container<E> {
+    operator fun contains(element: E): Boolean
 }
 
 fun inConvention(container: Container<String>) {

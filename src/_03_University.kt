@@ -3,4 +3,4 @@ package model
 open class University
 
 //singleton
-object UniversityOfHradecKralove : University()
+object TUM : University()

@@ -15,13 +15,8 @@ fun functions() {
 
 fun functionLiterals() {
     // anonymous function (lambda)
-    val getLastChar = { (s: String) -> s.charAt(s.length - 1) }
+    val getLastChar = { s: String -> s.charAt(s.length - 1) }
     getLastChar("abc")
 
-    // extension anonymous function (extension lambda)
-    val lastChar = { String.() -> this.charAt(this.length - 1) }
-    // 'this' can be omitted
-    val lastChar2 = { String.() -> charAt(length - 1) }
-    "abc".lastChar()
 }
 
